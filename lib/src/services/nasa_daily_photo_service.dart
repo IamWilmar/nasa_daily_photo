@@ -23,4 +23,5 @@ class NasaDailyPhotoService extends ChangeNotifier {
     this.dailyPhotoData = nasaResponse;
     notifyListeners();
   }
+  
 }
