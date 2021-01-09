@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => NasaDailyPhotoService())
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Nasa Daily Photo',
         initialRoute: HomePage.routeName,
         routes: {
