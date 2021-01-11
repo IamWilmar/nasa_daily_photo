@@ -7,8 +7,8 @@ import 'package:nasa_daily_photo/src/widgets/separation_line.dart';
 class ContentOverBackground extends StatelessWidget {
   ContentOverBackground({@required this.photoInfo});
   final NasaDailyPhotoResponse photoInfo;
-  final TextStyle titleFont = TextStyle(color: Colors.white.withOpacity(0.6), fontSize: 30);
-  final TextStyle copyrightFont = TextStyle(color: Colors.white.withOpacity(0.3), fontSize: 15);
+  final TextStyle titleFont = TextStyle(color: Colors.white.withOpacity(0.8), fontSize: 30);
+  final TextStyle copyrightFont = TextStyle(color: Colors.white.withOpacity(0.8), fontSize: 15);
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -22,7 +22,7 @@ class ContentOverBackground extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Text(photoInfo.title, style: titleFont, textAlign: TextAlign.end),
-          SeparationLine(width: width),
+          SeparationLine(width: width, color: Colors.white),
           Text( photoInfo.copyright != null ? 'copyright: ${photoInfo.copyright}' : 'copyright: unknown', style: copyrightFont),
           Text(formatted, style: copyrightFont),
           ActionsBar(),

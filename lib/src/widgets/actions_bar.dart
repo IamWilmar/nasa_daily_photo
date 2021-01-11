@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nasa_daily_photo/src/pages/search_page.dart';
 
 class ActionsBar extends StatelessWidget {
   @override
@@ -10,7 +11,9 @@ class ActionsBar extends StatelessWidget {
         direction: Axis.vertical,
         children: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, SearchPage.routeName);
+            },
             icon: CustomActionIcon(icon: Icons.search),
           ),
           IconButton(
@@ -35,7 +38,7 @@ class CustomActionIcon extends StatelessWidget {
     return Icon(
       icon,
       size: 40,
-      color: Colors.white.withOpacity(0.2),
+      color: Colors.white.withOpacity(0.8),
     );
   }
 }

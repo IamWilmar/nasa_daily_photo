@@ -3,11 +3,10 @@ import 'package:flutter/material.dart';
 class SeparationLine extends StatelessWidget {
   const SeparationLine({
     Key key,
-    @required this.width,
+    @required this.width, this.color,
   }) : super(key: key);
-
+  final Color color;
   final double width;
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,7 +15,7 @@ class SeparationLine extends StatelessWidget {
       height: 5,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20.0),
-        color: Colors.white,
+        color: color,
       ),
     );
   }
